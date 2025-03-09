@@ -1,49 +1,91 @@
-.Buttons {
+.Group {
   display: flex;
   padding-top: 1.5rem;
 }
 
-.Button {
+.Base {
   cursor: pointer;
   background: transparent;
-  color: #ffffff;
-  background-color: var(--theme-ash-gray-dark, #3a4646);
-  border: 3px solid var(--theme-ash-gray-dark, #3a4646);
   border-radius: 3.125rem;
   padding: 0.75rem 1.25rem;
-
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1rem;
 }
+
+/* Обычная кнопка с заливкой */
+.Button {
+  composes: Base;
+  color: var(--light-primary);
+  background-color: var(--theme-ash-gray-dark, #3a4646);
+  border: 3px solid var(--theme-ash-gray-dark, #3a4646);
+}
 .Button:hover {
-  background: transparent;
-  color: var(--theme-ash-gray-dark, #3a4646);
+  background: var(--theme-ash-gray-dark-50);
+  border-color: transparent;
+}
+.Button:active {
+  background: var(--theme-ash-gray-dark-80);
+  border-color: transparent;
 }
 .Button[disabled] {
-  opacity: 0.5;
+  opacity: 0.25;
+}
+.Button[theme="sage"] {
+  color: var(--theme-sage-dark-80, rgba(78, 94, 27, 0.8));
+  background: var(--theme-sage-primary, #b2be83);
+  border-color: var(--theme-sage-primary, #b2be83);
+}
+.Button[theme="sage"]:hover {
+  background: var(--theme-sage-dark-80, rgba(78, 94, 27, 0.8));
+  border-color: transparent;
+  color: var(--theme-sage-primary, #b2be83);
+}
+.Button[theme="sage"]:active {
+  color: var(--theme-sage-primary, #b2be83);
+  background: var(--theme-sage-dark, #596b1f);
+  border-color: var(--theme-sage-dark, #596b1f);
+}
+.BigButton {
+  composes: Button;
+  padding: 0.9375rem 2.8125rem;
+  font-size: 1.25rem;
 }
 
+/* "Пустая" кнопка с рамкой */
 .Outline {
-  composes: Button;
+  composes: Base;
+  border: 3px solid var(--theme-ash-gray-dark, #3a4646);
   background-color: transparent;
-  color: var(--theme-ash-gray-dark, #3a4646);
+  color: var(--theme-ash-gray-dark);
 }
 .Outline:hover {
-  background-color: var(--theme-ash-gray-dark, #3a4646);
-  color: #ffffff;
+  border-color: var(--theme-ash-gray-dark-50);
+  color: var(--theme-ash-gray-dark-50);
 }
-
-.Button:active,
 .Outline:active {
-  background: var(--theme-baby-blue-primary, #8bcaf2);
-  border-color: var(--theme-baby-blue-primary, #8bcaf2);
-  color: #ffffff;
+  border-color: var(--theme-ash-gray-dark-80);
+  color: var(--theme-ash-gray-dark-80);
 }
-
-.Big {
-  composes: Button;
+/* Цветовые схемы */
+.Outline[theme="sage"] {
+  background-color: transparent;
+  color: var(--theme-sage-primary);
+  border-color: var(--theme-sage-primary);
+}
+.Outline[theme="sage"]:hover {
+  background-color: transparent;
+  color: var(--theme-sage-dark-80);
+  border-color: var(--theme-sage-dark-80);
+}
+.Outline[theme="sage"]:active {
+  background-color: transparent;
+  color: var(--theme-sage-dark-50);
+  border-color: var(--theme-sage-dark-50);
+}
+.BigOutline {
+  composes: Outline;
   padding: 0.9375rem 2.8125rem;
   font-size: 1.25rem;
 }

@@ -31,7 +31,7 @@ function Landing() {
               </div>
               <div className="Actions__login">
                 <div className="Actions__text">or</div>
-                <button className={Buttons.Outline}>Sign in</button>
+                <button className={Buttons.BigOutline}>Sign in</button>
                 <div className="Actions__text">
                   to load work done previously
                 </div>

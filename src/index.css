@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("./colors.css");
 
 * {
   box-sizing: border-box;
@@ -11,9 +12,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: #222222;
-  background-color: #ffffff;
+  color: var(--theme-ash-gray-dark);
+  background-color: var(--light-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,12 +22,9 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
 }
 
 body {

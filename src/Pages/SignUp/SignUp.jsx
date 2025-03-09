@@ -23,8 +23,10 @@ function SignUp() {
             <div className={FormStyles.Field}>
               <input type="text" placeholder="your@mail.com" disabled={true} />
             </div>
-            <div className={Buttons.Buttons}>
-              <button className={Buttons.Big}>Link email with Globbb</button>
+            <div className={Buttons.Group}>
+              <button className={Buttons.BigButton} theme="sage">
+                Link email with Globbb
+              </button>
             </div>
           </form>
         </div>
