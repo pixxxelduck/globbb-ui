@@ -5,7 +5,7 @@
 }
 
 .Form h1 {
-  color: var(--theme-ash-gray-dark, #3a4646);
+  color: var(--theme-ash-gray-dark-80, rgba(58, 70, 70, 0.8));
   font-size: 2.25rem;
   font-style: normal;
   font-weight: 400;
@@ -14,12 +14,85 @@
 }
 
 .Form p {
-  color: var(--theme-ash-gray-dark, #3a4646);
+  color: var(--theme-ash-gray-dark-50, rgba(58, 70, 70, 0.5));
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
   letter-spacing: -0.025rem;
+}
+
+/* Цветовые схемы для заголовков и текста */
+/* Cadet Blue */
+.Form[theme="cadet-blue"] h1 {
+  color: var(--theme-cadet-blue-dark-80, rgba(73, 62, 101, 0.8));
+}
+.Form[theme="cadet-blue"] p {
+  color: var(--theme-cadet-blue-dark-50, rgba(73, 62, 101, 0.5));
+}
+
+/* Pastel Blue */
+.Form[theme="pastel-blue"] h1 {
+  color: var(--theme-pastel-blue-dark-80, rgba(17, 105, 100, 0.8));
+}
+.Form[theme="pastel-blue"] p {
+  color: var(--theme-pastel-blue-dark-50, rgba(17, 105, 100, 0.5));
+}
+
+/* Pewter Blue */
+.Form[theme="pewter-blue"] h1 {
+  color: var(--theme-pewter-blue-dark-80, rgba(55, 80, 109, 0.8));
+}
+.Form[theme="pewter-blue"] p {
+  color: var(--theme-pewter-blue-dark-50, rgba(55, 80, 109, 0.5));
+}
+
+/* Baby Blue */
+.Form[theme="baby-blue"] h1 {
+  color: var(--theme-baby-blue-dark-80, rgba(55, 80, 109, 0.8));
+}
+.Form[theme="baby-blue"] p {
+  color: var(--theme-baby-blue-dark-50, rgba(55, 80, 109, 0.5));
+}
+
+/* Sage */
+.Form[theme="sage"] h1 {
+  color: var(--theme-sage-dark-80, rgba(89, 107, 31, 0.8));
+}
+.Form[theme="sage"] p {
+  color: var(--theme-sage-dark-50, rgba(89, 107, 31, 0.5));
+}
+
+/* Fawn */
+.Form[theme="fawn"] h1 {
+  color: var(--theme-fawn-dark-80, rgba(102, 70, 28, 0.8));
+}
+.Form[theme="fawn"] p {
+  color: var(--theme-fawn-dark-50, rgba(102, 70, 28, 0.5));
+}
+
+/* Parrot Pink */
+.Form[theme="parrot-pink"] h1 {
+  color: var(--theme-parrot-pink-dark-80, rgba(92, 36, 41, 0.8));
+}
+.Form[theme="parrot-pink"] p {
+  color: var(--theme-parrot-pink-dark-50, rgba(92, 36, 41, 0.5));
+}
+
+/* Kobi */
+.Form[theme="kobi"] h1 {
+  color: var(--theme-kobi-dark-80, rgba(156, 78, 120, 0.8));
+}
+.Form[theme="kobi"] p {
+  color: var(--theme-kobi-dark-50, rgba(156, 78, 120, 0.5));
+}
+
+/* Sandy */
+.Form[theme="sandy"] h1 {
+  color: var(--theme-sandy-dark-80, rgba(159, 76, 8, 0.8));
+}
+.Form[theme="sandy"] p {
+  color: var(--theme-sandy-dark-50, rgba(159, 76, 8, 0.5));
 }
 
 .Field {
@@ -32,7 +105,7 @@
   width: 100%;
   border-radius: 0.5rem;
   border: 3px solid var(--theme-ash-gray-primary, #b0bbbc);
-  background: var(--color-white-50, rgba(255, 255, 255, 0.65));
+  background: var(--light-50, rgba(255, 255, 255, 0.65));
 
   padding: 0.625rem 1.25rem;
   color: var(--theme-ash-gray-dark-80, rgba(58, 70, 70, 0.8));
@@ -47,11 +120,129 @@
 }
 .Field input:focus {
   border: 3px solid var(--theme-ash-gray-dark-80, rgba(58, 70, 70, 0.8));
-  background: var(--color-white, #fff);
+  background: var(--light-primary, #fff);
   outline: none;
 }
 .Form input[disabled] {
   cursor: not-allowed;
   background: transparent;
   opacity: 0.45;
+}
+
+/* Цветовые схемы для полей ввода */
+/* Cadet Blue */
+.Form[theme="cadet-blue"] .Field input {
+  border: 3px solid var(--theme-cadet-blue-primary, #b0a6c4);
+  color: var(--theme-cadet-blue-dark-80, rgba(73, 62, 101, 0.8));
+}
+.Form[theme="cadet-blue"] .Field input::placeholder {
+  color: var(--theme-cadet-blue-primary, #b0a6c4);
+}
+.Form[theme="cadet-blue"] .Field input:focus {
+  border: 3px solid var(--theme-cadet-blue-dark-80, rgba(73, 62, 101, 0.8));
+  background: var(--light-primary, #fff);
+}
+
+/* Pastel Blue */
+.Form[theme="pastel-blue"] .Field input {
+  border: 3px solid var(--theme-pastel-blue-primary, #9dcbc9);
+  color: var(--theme-pastel-blue-dark-80, rgba(17, 105, 100, 0.8));
+}
+.Form[theme="pastel-blue"] .Field input::placeholder {
+  color: var(--theme-pastel-blue-primary, #9dcbc9);
+}
+.Form[theme="pastel-blue"] .Field input:focus {
+  border: 3px solid var(--theme-pastel-blue-dark-80, rgba(17, 105, 100, 0.8));
+  background: var(--light-primary, #fff);
+}
+
+/* Pewter Blue */
+.Form[theme="pewter-blue"] .Field input {
+  border: 3px solid var(--theme-pewter-blue-primary, #8ca4c1);
+  color: var(--theme-pewter-blue-dark-80, rgba(55, 80, 109, 0.8));
+}
+.Form[theme="pewter-blue"] .Field input::placeholder {
+  color: var(--theme-pewter-blue-primary, #8ca4c1);
+}
+.Form[theme="pewter-blue"] .Field input:focus {
+  border: 3px solid var(--theme-pewter-blue-dark-80, rgba(55, 80, 109, 0.8));
+  background: var(--light-primary, #fff);
+}
+
+/* Baby Blue */
+.Form[theme="baby-blue"] .Field input {
+  border: 3px solid var(--theme-baby-blue-primary, #8bcaf2);
+  color: var(--theme-baby-blue-dark-80, rgba(55, 80, 109, 0.8));
+}
+.Form[theme="baby-blue"] .Field input::placeholder {
+  color: var(--theme-baby-blue-primary, #8bcaf2);
+}
+.Form[theme="baby-blue"] .Field input:focus {
+  border: 3px solid var(--theme-baby-blue-dark-80, rgba(55, 80, 109, 0.8));
+  background: var(--light-primary, #fff);
+}
+
+/* Sage */
+.Form[theme="sage"] .Field input {
+  border: 3px solid var(--theme-sage-primary, #b2be83);
+  color: var(--theme-sage-dark-80, rgba(89, 107, 31, 0.8));
+}
+.Form[theme="sage"] .Field input::placeholder {
+  color: var(--theme-sage-primary, #b2be83);
+}
+.Form[theme="sage"] .Field input:focus {
+  border: 3px solid var(--theme-sage-dark-80, rgba(89, 107, 31, 0.8));
+  background: var(--light-primary, #fff);
+}
+
+/* Fawn */
+.Form[theme="fawn"] .Field input {
+  border: 3px solid var(--theme-fawn-primary, #d6ae7b);
+  color: var(--theme-fawn-dark-80, rgba(102, 70, 28, 0.8));
+}
+.Form[theme="fawn"] .Field input::placeholder {
+  color: var(--theme-fawn-primary, #d6ae7b);
+}
+.Form[theme="fawn"] .Field input:focus {
+  border: 3px solid var(--theme-fawn-dark-80, rgba(102, 70, 28, 0.8));
+  background: var(--light-primary, #fff);
+}
+
+/* Parrot Pink */
+.Form[theme="parrot-pink"] .Field input {
+  border: 3px solid var(--theme-parrot-pink-primary, #cb9ca3);
+  color: var(--theme-parrot-pink-dark-80, rgba(92, 36, 41, 0.8));
+}
+.Form[theme="parrot-pink"] .Field input::placeholder {
+  color: var(--theme-parrot-pink-primary, #cb9ca3);
+}
+.Form[theme="parrot-pink"] .Field input:focus {
+  border: 3px solid var(--theme-parrot-pink-dark-80, rgba(92, 36, 41, 0.8));
+  background: var(--light-primary, #fff);
+}
+
+/* Kobi */
+.Form[theme="kobi"] .Field input {
+  border: 3px solid var(--theme-kobi-primary, #e6a1c8);
+  color: var(--theme-kobi-dark-80, rgba(156, 78, 120, 0.8));
+}
+.Form[theme="kobi"] .Field input::placeholder {
+  color: var(--theme-kobi-primary, #e6a1c8);
+}
+.Form[theme="kobi"] .Field input:focus {
+  border: 3px solid var(--theme-kobi-dark-80, rgba(156, 78, 120, 0.8));
+  background: var(--light-primary, #fff);
+}
+
+/* Sandy */
+.Form[theme="sandy"] .Field input {
+  border: 3px solid var(--theme-sandy-primary, #e6a66b);
+  color: var(--theme-sandy-dark-80, rgba(159, 76, 8, 0.8));
+}
+.Form[theme="sandy"] .Field input::placeholder {
+  color: var(--theme-sandy-primary, #e6a66b);
+}
+.Form[theme="sandy"] .Field input:focus {
+  border: 3px solid var(--theme-sandy-dark-80, rgba(159, 76, 8, 0.8));
+  background: var(--light-primary, #fff);
 }

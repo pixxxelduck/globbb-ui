@@ -1,0 +1,24 @@
+.SignIn {
+  display: flex;
+  background: var(--theme-kobi-primary-25);
+  min-height: 100vh;
+}
+
+.Picture {
+  width: 40rem;
+  height: 44rem;
+  background-image: url(./assets/picture.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 10rem;
+}
+
+.Form {
+  width: 27rem;
+}

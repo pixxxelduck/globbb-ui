@@ -1,6 +1,7 @@
 import "../../Blocks/Logotype/Logotype.css";
 import FormStyles from "../../Blocks/Form/Form.module.css";
 import Buttons from "../../Blocks/Buttons/Buttons.module.css";
+import Logotype from "../../Blocks/Logotype";
 import styles from "./SignUp.module.css";
 
 function SignUp() {
@@ -9,8 +10,11 @@ function SignUp() {
       <div className={styles.SignUp}>
         <div className={styles.Picture}></div>
         <div className={styles.Content}>
-          <div className="Logotype"></div>
-          <form className={[FormStyles.Form, styles.Form].join(" ")}>
+          <Logotype theme="sage" variant="primary-50" />
+          <form
+            className={[FormStyles.Form, styles.Form].join(" ")}
+            theme="sage"
+          >
             <h1>How can we introduce you?</h1>
             <p>
               Enter your username and email address and we'll send you a

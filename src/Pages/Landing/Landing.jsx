@@ -1,4 +1,5 @@
 import "./Landing.css";
+import Logotype from "../../Blocks/Logotype";
 import Buttons from "../../Blocks/Buttons/Buttons.module.css";
 
 function Landing() {
@@ -8,7 +9,7 @@ function Landing() {
         <div className="Landing__content">
           <div className="header__container">
             <div className="header">
-              <div className="logotype"></div>
+              <Logotype />
               <div className="slogan">
                 a project tracking calendar. For people, not for companies.
               </div>
@@ -31,7 +32,7 @@ function Landing() {
               </div>
               <div className="Actions__login">
                 <div className="Actions__text">or</div>
-                <button className={Buttons.BigOutline}>Sign in</button>
+                <button className={Buttons.Outline}>Sign in</button>
                 <div className="Actions__text">
                   to load work done previously
                 </div>
