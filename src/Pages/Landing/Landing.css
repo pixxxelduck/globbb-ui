@@ -1,0 +1,178 @@
+.Landing {
+  display: flex;
+  justify-content: center;
+}
+
+.Landing__content {
+  /* border: 10px solid yellow !important; */
+  width: 80rem;
+  background-image: url(./assets/doodle.svg);
+  background-repeat: no-repeat;
+  background-position: top 10rem right;
+  background-size: 85%;
+}
+
+.Landing__content div {
+  /* border: 1px solid red; */
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 2em;
+}
+
+.header,
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.slogan {
+  display: flex;
+  align-items: center;
+  color: #b0bbbc;
+  opacity: 0.5;
+  font-family: Helvetica;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.025rem;
+}
+
+.logotype {
+  width: 10.71788rem;
+  height: 1.58825rem;
+  background-image: url(../../Blocks/Logotype/Logotype.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.Landing__lead {
+  width: 100%;
+  background-image: url(./assets/lead.png);
+  background-repeat: no-repeat;
+  background-position: top 2rem left 2rem;
+  background-size: 95%;
+  height: 26rem;
+  /* border: 10px solid yellow !important; */
+}
+
+.Landing__arrow-red {
+  width: 100%;
+  background-image: url(./assets/arrow_red.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: 95%; */
+  height: 12rem;
+  /* border: 10px solid yellow !important; */
+}
+
+.Landing__about {
+  width: 100%;
+  background-image: url(./assets/about.png);
+  background-repeat: no-repeat;
+  background-position: top left 2rem;
+  background-size: 95%;
+  height: 35rem;
+  /* border: 10px solid yellow !important; */
+}
+
+.Landing__arrow-blue {
+  width: 100%;
+  background-image: url(./assets/arrow_blue.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  /* background-size: 95%; */
+  height: 12rem;
+  /* border: 10px solid yellow !important; */
+}
+
+.Landing__footer {
+  width: 100%;
+  background-image: url(./assets/footer.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 12rem;
+}
+
+.Landing__CTA {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 2em;
+}
+
+.CTA__left {
+  background-image: url(./assets/cta_left.png);
+  background-repeat: no-repeat;
+  /* background-position: bottom center; */
+  width: 18.89056rem;
+  height: 15.875rem;
+  flex-shrink: 0;
+}
+
+.CTA__actions {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.Actions__registration,
+.Actions__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.Actions__login {
+  gap: 0.5rem;
+}
+
+.Actions__slogan {
+  color: var(--theme-ash-gray-primary-50, rgba(176, 187, 188, 0.5));
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.05rem;
+}
+
+.Actions__registrationButton {
+  cursor: pointer;
+  width: 15.27231rem;
+  height: 2.85rem;
+  background-image: url(./assets/Button/default.svg);
+  background-repeat: no-repeat;
+}
+.Actions__registrationButton:hover {
+  background-image: url(./assets/Button/hover.svg);
+}
+.Actions__registrationButton:active {
+  background-image: url(./assets/Button/active.svg);
+}
+
+.Actions__text {
+  color: var(--theme-ash-gray-primary, rgba(176, 187, 188, 1));
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.02rem;
+}
+
+.CTA__right {
+  background-image: url(./assets/cta_right.png);
+  background-repeat: no-repeat;
+  width: 20.64844rem;
+  height: 19.10313rem;
+  flex-shrink: 0;
+}
