@@ -1,3 +1,8 @@
+.Buttons {
+  display: flex;
+  padding-top: 1.5rem;
+}
+
 .Button {
   cursor: pointer;
   background: transparent;
@@ -35,4 +40,10 @@
   background: var(--theme-baby-blue-primary, #8bcaf2);
   border-color: var(--theme-baby-blue-primary, #8bcaf2);
   color: #ffffff;
+}
+
+.Big {
+  composes: Button;
+  padding: 0.9375rem 2.8125rem;
+  font-size: 1.25rem;
 }

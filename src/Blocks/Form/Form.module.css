@@ -1,0 +1,57 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.Form h1 {
+  color: var(--theme-ash-gray-dark, #3a4646);
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.045rem;
+}
+
+.Form p {
+  color: var(--theme-ash-gray-dark, #3a4646);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.025rem;
+}
+
+.Field {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.Field input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 3px solid var(--theme-ash-gray-primary, #b0bbbc);
+  background: var(--color-white-50, rgba(255, 255, 255, 0.65));
+
+  padding: 0.625rem 1.25rem;
+  color: var(--theme-ash-gray-dark-80, rgba(58, 70, 70, 0.8));
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.2s ease;
+}
+.Field input::placeholder {
+  color: var(--theme-ash-gray-primary, #b0bbbc);
+}
+.Field input:focus {
+  border: 3px solid var(--theme-ash-gray-dark-80, rgba(58, 70, 70, 0.8));
+  background: var(--color-white, #fff);
+  outline: none;
+}
+.Form input[disabled] {
+  cursor: not-allowed;
+  background: transparent;
+  opacity: 0.45;
+}
