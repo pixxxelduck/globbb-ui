@@ -4,6 +4,12 @@
   gap: 0.25rem;
 }
 
+.Group {
+  display: flex;
+  padding-top: 1.5rem;
+  gap: 0.5rem;
+}
+
 .Form h1 {
   color: var(--theme-ash-gray-dark-80, rgba(58, 70, 70, 0.8));
   font-size: 2.25rem;
@@ -15,9 +21,18 @@
 
 .Form p {
   color: var(--theme-ash-gray-dark-50, rgba(58, 70, 70, 0.5));
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-style: normal;
   font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.025rem;
+}
+
+.Form a {
+  text-decoration: underline;
+  color: var(--theme-ash-gray-dark-50, rgba(58, 70, 70, 0.5));
+  font-style: normal;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: -0.025rem;
 }
@@ -27,7 +42,8 @@
 .Form[theme="cadet-blue"] h1 {
   color: var(--theme-cadet-blue-dark-80, rgba(73, 62, 101, 0.8));
 }
-.Form[theme="cadet-blue"] p {
+.Form[theme="cadet-blue"] p,
+.Form[theme="cadet-blue"] a {
   color: var(--theme-cadet-blue-dark-50, rgba(73, 62, 101, 0.5));
 }
 
@@ -35,7 +51,8 @@
 .Form[theme="pastel-blue"] h1 {
   color: var(--theme-pastel-blue-dark-80, rgba(17, 105, 100, 0.8));
 }
-.Form[theme="pastel-blue"] p {
+.Form[theme="pastel-blue"] p,
+.Form[theme="pastel-blue"] a {
   color: var(--theme-pastel-blue-dark-50, rgba(17, 105, 100, 0.5));
 }
 
@@ -43,7 +60,8 @@
 .Form[theme="pewter-blue"] h1 {
   color: var(--theme-pewter-blue-dark-80, rgba(55, 80, 109, 0.8));
 }
-.Form[theme="pewter-blue"] p {
+.Form[theme="pewter-blue"] p,
+.Form[theme="pewter-blue"] a {
   color: var(--theme-pewter-blue-dark-50, rgba(55, 80, 109, 0.5));
 }
 
@@ -51,7 +69,8 @@
 .Form[theme="baby-blue"] h1 {
   color: var(--theme-baby-blue-dark-80, rgba(55, 80, 109, 0.8));
 }
-.Form[theme="baby-blue"] p {
+.Form[theme="baby-blue"] p,
+.Form[theme="baby-blue"] a {
   color: var(--theme-baby-blue-dark-50, rgba(55, 80, 109, 0.5));
 }
 
@@ -59,7 +78,8 @@
 .Form[theme="sage"] h1 {
   color: var(--theme-sage-dark-80, rgba(89, 107, 31, 0.8));
 }
-.Form[theme="sage"] p {
+.Form[theme="sage"] p,
+.Form[theme="sage"] a {
   color: var(--theme-sage-dark-50, rgba(89, 107, 31, 0.5));
 }
 
@@ -67,7 +87,8 @@
 .Form[theme="fawn"] h1 {
   color: var(--theme-fawn-dark-80, rgba(102, 70, 28, 0.8));
 }
-.Form[theme="fawn"] p {
+.Form[theme="fawn"] p,
+.Form[theme="fawn"] a {
   color: var(--theme-fawn-dark-50, rgba(102, 70, 28, 0.5));
 }
 
@@ -75,7 +96,8 @@
 .Form[theme="parrot-pink"] h1 {
   color: var(--theme-parrot-pink-dark-80, rgba(92, 36, 41, 0.8));
 }
-.Form[theme="parrot-pink"] p {
+.Form[theme="parrot-pink"] p,
+.Form[theme="parrot-pink"] a {
   color: var(--theme-parrot-pink-dark-50, rgba(92, 36, 41, 0.5));
 }
 
@@ -83,7 +105,8 @@
 .Form[theme="kobi"] h1 {
   color: var(--theme-kobi-dark-80, rgba(156, 78, 120, 0.8));
 }
-.Form[theme="kobi"] p {
+.Form[theme="kobi"] p,
+.Form[theme="kobi"] a {
   color: var(--theme-kobi-dark-50, rgba(156, 78, 120, 0.5));
 }
 
@@ -91,7 +114,8 @@
 .Form[theme="sandy"] h1 {
   color: var(--theme-sandy-dark-80, rgba(159, 76, 8, 0.8));
 }
-.Form[theme="sandy"] p {
+.Form[theme="sandy"] p,
+.Form[theme="sandy"] a {
   color: var(--theme-sandy-dark-50, rgba(159, 76, 8, 0.5));
 }
 

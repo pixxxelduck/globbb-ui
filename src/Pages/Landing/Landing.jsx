@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Landing.css";
 import Logotype from "../../Blocks/Logotype";
 import Buttons from "../../Blocks/Buttons/Buttons.module.css";
@@ -15,8 +16,12 @@ function Landing() {
               </div>
             </div>
             <div className="buttons">
-              <button className={Buttons.Outline}>Let's play</button>
-              <button className={Buttons.Button}>Sign in</button>
+              <Link className={Buttons.Outline} to="/signup">
+                Let's play
+              </Link>
+              <Link className={Buttons.Button} to="/signin">
+                Sign in
+              </Link>
             </div>
           </div>
           <div className="Landing__lead"></div>
@@ -28,11 +33,13 @@ function Landing() {
             <div className="CTA__actions">
               <div className="Actions__registration">
                 <div className="Actions__slogan">Make Plans Happen</div>
-                <div className="Actions__registrationButton"></div>
+                <Link className="Actions__registrationButton" to="/signup" />
               </div>
               <div className="Actions__login">
                 <div className="Actions__text">or</div>
-                <button className={Buttons.Outline}>Sign in</button>
+                <Link className={Buttons.Outline} to="/signin">
+                  Sign in
+                </Link>
                 <div className="Actions__text">
                   to load work done previously
                 </div>
