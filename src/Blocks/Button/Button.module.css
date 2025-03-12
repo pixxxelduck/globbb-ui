@@ -1,0 +1,83 @@
+:root {
+  --opacity: 0.5;
+}
+
+.Base {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 3.125rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem;
+  transition: all 0.2s ease;
+}
+
+.Filled {
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  border: 3px solid var(--button-border);
+}
+
+.Filled:hover {
+  background: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-border);
+}
+
+.Filled:active {
+  background: var(--button-active-bg);
+  color: var(--button-active-color);
+  border-color: var(--button-active-border);
+}
+
+.Filled[disabled] {
+  opacity: var(--opacity);
+  cursor: not-allowed;
+}
+.Filled[disabled]:hover {
+  opacity: var(--opacity);
+  cursor: not-allowed;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  border: 3px solid var(--button-border);
+}
+
+/* Общие стили для контурной кнопки */
+.Outline {
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  border: 3px solid var(--button-border);
+}
+
+.Outline:hover {
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-border);
+}
+
+.Outline:active {
+  color: var(--button-active-color);
+  border-color: var(--button-active-border);
+}
+
+.Outline[disabled] {
+  opacity: var(--opacity);
+  cursor: not-allowed;
+}
+.Outline[disabled]:hover {
+  opacity: var(--opacity);
+  cursor: not-allowed;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  border: 3px solid var(--button-border);
+}
+
+/* Стили для большой кнопки */
+.Big {
+  padding: 0.9375rem 2.8125rem;
+  font-size: 1.25rem;
+}

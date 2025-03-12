@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Landing.css";
 import Logotype from "../../Blocks/Logotype";
-import Buttons from "../../Blocks/Buttons/Buttons.module.css";
+import Button from "../../Blocks/Button";
 
 function Landing() {
   return (
@@ -16,12 +16,10 @@ function Landing() {
               </div>
             </div>
             <div className="buttons">
-              <Link className={Buttons.Outline} to="/signup">
-                Let's play
-              </Link>
-              <Link className={Buttons.Button} to="/signin">
-                Sign in
-              </Link>
+              <Button variant="outline" to="/signup">
+                Create an Account
+              </Button>
+              <Button to="/signin">Log In</Button>
             </div>
           </div>
           <div className="Landing__lead"></div>
@@ -37,9 +35,9 @@ function Landing() {
               </div>
               <div className="Actions__login">
                 <div className="Actions__text">or</div>
-                <Link className={Buttons.Outline} to="/signin">
-                  Sign in
-                </Link>
+                <Button variant="outline" to="/signin">
+                  Log In
+                </Button>
                 <div className="Actions__text">
                   to load work done previously
                 </div>

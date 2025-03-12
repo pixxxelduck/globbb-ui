@@ -1,5 +1,5 @@
 import React from "react";
-import themeColors from "./colors.json";
+import { THEMES } from "../../constants/themes";
 
 /**
  * Компонент логотипа с поддержкой цветовых тем и их оттенков
@@ -20,9 +20,9 @@ const Logotype = ({
 }) => {
   // Получаем цвет для текущей темы и варианта или используем значение по умолчанию
   const fillColor =
-    themeColors[theme] && themeColors[theme][variant]
-      ? themeColors[theme][variant]
-      : themeColors["ash-gray"]["dark"];
+    THEMES[theme] && THEMES[theme][variant]
+      ? THEMES[theme][variant]
+      : THEMES["ash-gray"]["dark"];
 
   return (
     <svg
