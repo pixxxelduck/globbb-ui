@@ -24,19 +24,19 @@ function SignUp() {
           <Form className={styles.Form} theme="sage">
             <h1>How can we introduce you?</h1>
             <p>
-              Enter your username and email address and we'll send you a
+              Enter your email address and username and we'll send you a
               one-time magic link. By clicking the link below, you will
               automatically link your data to your email.
             </p>
-            <Form.Field>
-              <input type="text" placeholder="username" disabled={isLoading} />
-            </Form.Field>
             <Form.Field>
               <input
                 type="text"
                 placeholder="your@mail.com"
                 disabled={isLoading}
               />
+            </Form.Field>
+            <Form.Field>
+              <input type="text" placeholder="username" disabled={isLoading} />
             </Form.Field>
             <Form.Group>
               <PendingButton

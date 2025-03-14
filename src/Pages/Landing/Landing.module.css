@@ -3,20 +3,22 @@
   justify-content: center;
 }
 
-.Landing__content {
+.content {
   /* border: 10px solid yellow !important; */
-  width: 80rem;
+  min-width: 1280px;
+  /* width: 1280px; */
+  /* width: 80rem; */
   background-image: url(./assets/doodle.svg);
   background-repeat: no-repeat;
   background-position: top 10rem right;
   background-size: 85%;
 }
 
-.Landing__content div {
+.content div {
   /* border: 1px solid red; */
 }
 
-.header__container {
+.header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -25,8 +27,7 @@
   padding: 2em;
 }
 
-.header,
-.buttons {
+.row {
   display: flex;
   flex-direction: row;
   gap: 1em;
@@ -35,7 +36,7 @@
 .slogan {
   display: flex;
   align-items: center;
-  color: #b0bbbc;
+  color: var(--theme-ash-gray-dark-50);
   opacity: 0.5;
   font-family: Helvetica;
   font-size: 1.25rem;
@@ -45,7 +46,7 @@
   letter-spacing: -0.025rem;
 }
 
-.Landing__lead {
+.lead {
   width: 100%;
   background-image: url(./assets/lead.png);
   background-repeat: no-repeat;
@@ -55,7 +56,7 @@
   /* border: 10px solid yellow !important; */
 }
 
-.Landing__arrow-red {
+.arrowRed {
   width: 100%;
   background-image: url(./assets/arrow_red.png);
   background-repeat: no-repeat;
@@ -65,7 +66,7 @@
   /* border: 10px solid yellow !important; */
 }
 
-.Landing__about {
+.about {
   width: 100%;
   background-image: url(./assets/about.png);
   background-repeat: no-repeat;
@@ -75,7 +76,7 @@
   /* border: 10px solid yellow !important; */
 }
 
-.Landing__arrow-blue {
+.arrowBlue {
   width: 100%;
   background-image: url(./assets/arrow_blue.png);
   background-repeat: no-repeat;
@@ -85,7 +86,7 @@
   /* border: 10px solid yellow !important; */
 }
 
-.Landing__footer {
+.footer {
   width: 100%;
   background-image: url(./assets/footer.png);
   background-repeat: no-repeat;
@@ -93,14 +94,14 @@
   height: 12rem;
 }
 
-.Landing__CTA {
+.callToAction {
   display: flex;
   width: 100%;
   align-items: center;
   padding: 2em;
 }
 
-.CTA__left {
+.left {
   background-image: url(./assets/cta_left.png);
   background-repeat: no-repeat;
   /* background-position: bottom center; */
@@ -109,27 +110,22 @@
   flex-shrink: 0;
 }
 
-.CTA__actions {
+.actions {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   gap: 1rem;
 }
 
-.Actions__registration,
-.Actions__login {
+.column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.Actions__login {
-  gap: 0.5rem;
-}
-
-.Actions__slogan {
-  color: var(--theme-ash-gray-primary-50, rgba(176, 187, 188, 0.5));
+.bigText {
+  color: var(--theme-ash-gray-primary);
   text-align: center;
   font-size: 2.5rem;
   font-style: normal;
@@ -138,21 +134,21 @@
   letter-spacing: -0.05rem;
 }
 
-.Actions__registrationButton {
+.bigButton {
   cursor: pointer;
   width: 15.27231rem;
   height: 2.85rem;
   background-image: url(./assets/Button/default.svg);
   background-repeat: no-repeat;
 }
-.Actions__registrationButton:hover {
+.bigButton:hover {
   background-image: url(./assets/Button/hover.svg);
 }
-.Actions__registrationButton:active {
+.bigButton:active {
   background-image: url(./assets/Button/active.svg);
 }
 
-.Actions__text {
+.text {
   color: var(--theme-ash-gray-primary, rgba(176, 187, 188, 1));
   font-size: 1rem;
   font-style: normal;
@@ -161,7 +157,7 @@
   letter-spacing: -0.02rem;
 }
 
-.CTA__right {
+.right {
   background-image: url(./assets/cta_right.png);
   background-repeat: no-repeat;
   width: 20.64844rem;
