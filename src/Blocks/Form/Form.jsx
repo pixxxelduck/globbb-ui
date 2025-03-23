@@ -32,9 +32,9 @@ const Form = ({
     "--form-text-color": `var(--theme-${actualTheme}-dark-50)`,
 
     // Стили для полей ввода
-    "--form-input-border": `var(--theme-${actualTheme}-primary)`,
+    "--form-input-border": `var(--theme-${actualTheme}-light)`,
     "--form-input-color": `var(--theme-${actualTheme}-dark-80)`,
-    "--form-input-placeholder": `var(--theme-${actualTheme}-primary)`,
+    "--form-input-placeholder": `var(--theme-${actualTheme}-light)`,
     "--form-input-focus-border": `var(--theme-${actualTheme}-dark-80)`,
   };
 

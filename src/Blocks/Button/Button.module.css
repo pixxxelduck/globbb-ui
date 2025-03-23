@@ -1,8 +1,4 @@
-:root {
-  --opacity: 0.5;
-}
-
-.Base {
+.base {
   display: flex;
   gap: 0.5rem;
   align-items: center;
@@ -17,67 +13,57 @@
   transition: all 0.2s ease;
 }
 
-.Filled {
-  background-color: var(--button-bg);
+.primary {
+  background-color: var(--button-background-color);
   color: var(--button-color);
   border: 3px solid var(--button-border);
 }
 
-.Filled:hover {
-  background: var(--button-hover-bg);
+.primary:hover {
+  background: var(--button-hover-background-color);
   color: var(--button-hover-color);
   border-color: var(--button-hover-border);
 }
 
-.Filled:active {
-  background: var(--button-active-bg);
+.primary:active {
+  background: var(--button-active-background-color);
   color: var(--button-active-color);
   border-color: var(--button-active-border);
 }
 
-.Filled[disabled] {
-  opacity: var(--opacity);
+.primary[disabled] {
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border: 3px solid var(--button-border);
+  filter: blur(calc(2px / 2));
   cursor: not-allowed;
 }
-.Filled[disabled]:hover {
-  opacity: var(--opacity);
-  cursor: not-allowed;
-  background-color: var(--button-bg);
+
+.secondary {
+  background-color: var(--button-background-color);
   color: var(--button-color);
   border: 3px solid var(--button-border);
 }
 
-/* Общие стили для контурной кнопки */
-.Outline {
-  background-color: var(--button-bg);
-  color: var(--button-color);
-  border: 3px solid var(--button-border);
-}
-
-.Outline:hover {
+.secondary:hover {
   color: var(--button-hover-color);
   border-color: var(--button-hover-border);
 }
 
-.Outline:active {
+.secondary:active {
   color: var(--button-active-color);
   border-color: var(--button-active-border);
 }
 
-.Outline[disabled] {
-  opacity: var(--opacity);
-  cursor: not-allowed;
-}
-.Outline[disabled]:hover {
-  opacity: var(--opacity);
-  cursor: not-allowed;
-  background-color: var(--button-bg);
+.secondary[disabled] {
+  background-color: var(--button-background-color);
   color: var(--button-color);
   border: 3px solid var(--button-border);
+  filter: blur(calc(2px / 2));
+  cursor: not-allowed;
 }
 
-/* Стили для большой кнопки */
-.Big {
+.big {
   padding: 0.9375rem 2.8125rem;
   font-size: 1.25rem;
 }

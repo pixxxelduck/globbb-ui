@@ -1,0 +1,91 @@
+:root {
+  /* ash-gray */
+  --theme-ash-gray-light: rgba(176, 187, 188, 1);
+  --theme-ash-gray-light-50: rgba(176, 187, 188, 0.5);
+  --theme-ash-gray-light-25: rgba(176, 187, 188, 0.25);
+  --theme-ash-gray-dark: rgba(58, 70, 70, 1);
+  --theme-ash-gray-dark-85: rgba(58, 70, 70, 0.85);
+  --theme-ash-gray-dark-80: rgba(58, 70, 70, 0.8);
+  --theme-ash-gray-dark-50: rgba(58, 70, 70, 0.5);
+
+  /* sage */
+  --theme-sage-light: rgba(178, 190, 131, 1);
+  --theme-sage-light-50: rgba(178, 190, 131, 0.5);
+  --theme-sage-light-25: rgba(178, 190, 131, 0.25);
+  --theme-sage-dark: rgba(89, 107, 31, 1);
+  --theme-sage-dark-85: rgba(89, 107, 31, 0.85);
+  --theme-sage-dark-80: rgba(89, 107, 31, 0.8);
+  --theme-sage-dark-50: rgba(89, 107, 31, 0.5);
+
+  /* kobi */
+  --theme-kobi-light: rgba(230, 161, 200, 1);
+  --theme-kobi-light-50: rgba(230, 161, 200, 0.5);
+  --theme-kobi-light-25: rgba(230, 161, 200, 0.25);
+  --theme-kobi-dark: rgba(156, 78, 120, 1);
+  --theme-kobi-dark-85: rgba(156, 78, 120, 0.85);
+  --theme-kobi-dark-80: rgba(156, 78, 120, 0.8);
+  --theme-kobi-dark-50: rgba(156, 78, 120, 0.5);
+
+  /* fawn */
+  --theme-fawn-light: rgba(215, 177, 118, 1);
+  --theme-fawn-light-50: rgba(215, 177, 118, 0.5);
+  --theme-fawn-light-25: rgba(215, 177, 118, 0.25);
+  --theme-fawn-dark: rgba(102, 70, 28, 1);
+  --theme-fawn-dark-85: rgba(102, 70, 28, 0.85);
+  --theme-fawn-dark-80: rgba(102, 70, 28, 0.8);
+  --theme-fawn-dark-50: rgba(102, 70, 28, 0.5);
+
+  /* cadet-blue */
+  --theme-cadet-blue-light: rgba(176, 166, 196, 1);
+  --theme-cadet-blue-light-50: rgba(176, 166, 196, 0.5);
+  --theme-cadet-blue-light-25: rgba(176, 166, 196, 0.25);
+  --theme-cadet-blue-dark: rgba(73, 62, 101, 1);
+  --theme-cadet-blue-dark-85: rgba(73, 62, 101, 0.85);
+  --theme-cadet-blue-dark-80: rgba(73, 62, 101, 0.8);
+  --theme-cadet-blue-dark-50: rgba(73, 62, 101, 0.5);
+
+  /* pastel-blue */
+  --theme-pastel-blue-light: rgba(157, 203, 201, 1);
+  --theme-pastel-blue-light-50: rgba(157, 203, 201, 0.5);
+  --theme-pastel-blue-light-25: rgba(157, 203, 201, 0.25);
+  --theme-pastel-blue-dark: rgba(17, 105, 100, 1);
+  --theme-pastel-blue-dark-85: rgba(17, 105, 100, 0.85);
+  --theme-pastel-blue-dark-80: rgba(17, 105, 100, 0.8);
+  --theme-pastel-blue-dark-50: rgba(17, 105, 100, 0.5);
+
+  /* baby-blue */
+  --theme-baby-blue-light: rgba(135, 189, 241, 1);
+  --theme-baby-blue-light-50: rgba(135, 189, 241, 0.5);
+  --theme-baby-blue-light-25: rgba(135, 189, 241, 0.25);
+  --theme-baby-blue-dark: rgba(68, 112, 152, 1);
+  --theme-baby-blue-dark-85: rgba(68, 112, 152, 0.85);
+  --theme-baby-blue-dark-80: rgba(68, 112, 152, 0.8);
+  --theme-baby-blue-dark-50: rgba(54, 98, 126, 0.5);
+
+  /* sandy */
+  --theme-sandy-light: rgba(230, 166, 107, 1);
+  --theme-sandy-light-50: rgba(230, 166, 107, 0.5);
+  --theme-sandy-light-25: rgba(230, 166, 107, 0.25);
+  --theme-sandy-dark: rgba(159, 76, 8, 1);
+  --theme-sandy-dark-85: rgba(159, 76, 8, 0.85);
+  --theme-sandy-dark-80: rgba(159, 76, 8, 0.8);
+  --theme-sandy-dark-50: rgba(159, 76, 8, 0.5);
+
+  /* parrot-pink */
+  --theme-parrot-pink-light: rgba(203, 156, 163, 1);
+  --theme-parrot-pink-light-50: rgba(203, 156, 163, 0.5);
+  --theme-parrot-pink-light-25: rgba(203, 156, 163, 0.25);
+  --theme-parrot-pink-dark: rgba(92, 36, 41, 1);
+  --theme-parrot-pink-dark-85: rgba(92, 36, 41, 0.85);
+  --theme-parrot-pink-dark-80: rgba(92, 36, 41, 0.8);
+  --theme-parrot-pink-dark-50: rgba(92, 36, 41, 0.5);
+
+  /* white */
+  --theme-white-light: rgba(255, 255, 255, 1);
+  --theme-white-light-80: rgba(255, 255, 255, 0.8);
+  --theme-white-light-50: rgba(255, 255, 255, 0.5);
+
+  /* transparent */
+  --theme-transparent-light: rgba(255, 255, 255, 0);
+  --theme-transparent-dark: rgba(0, 0, 0, 0);
+}

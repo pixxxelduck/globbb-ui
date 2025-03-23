@@ -1,15 +1,13 @@
-// src/components/UI/Button/Button.jsx
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { THEMES, DEFAULT_THEME } from "../../constants/themes";
+import generateStyle from "./generateStyle.util";
 import styles from "./Button.module.css";
 
 /**
  * Универсальный компонент кнопки с поддержкой рендеринга в виде ссылки
  *
  * @param {Object} props - свойства компонента
- * @param {string} [props.variant='filled'] - вариант кнопки ('filled', 'outline')
+ * @param {string} [props.variant='primary'] - вариант кнопки ('primary', 'secondary')
  * @param {string} [props.size='normal'] - размер кнопки ('normal', 'big')
  * @param {string} [props.theme='ash-gray'] - цветовая тема
  * @param {boolean} [props.disabled=false] - отключена ли кнопка
@@ -22,9 +20,9 @@ import styles from "./Button.module.css";
  * @param {string} [props.as] - компонент для рендеринга (например, 'a', 'button', Link)
  */
 const Button = ({
-  variant = "filled",
+  variant = "primary",
   size = "normal",
-  theme = DEFAULT_THEME,
+  theme = "ash-gray",
   disabled = false,
   className = "",
   children,
@@ -35,53 +33,14 @@ const Button = ({
   as,
   ...rest
 }) => {
-  // Проверяем, существует ли тема, иначе используем дефолтную
-  const actualTheme = THEMES[theme] ? theme : DEFAULT_THEME;
-
   // Определяем стилевые переменные для кнопки на основе темы и варианта
-  const buttonStyle = {
-    // Основные цвета зависят от варианта (filled или outline)
-    "--button-bg":
-      variant === "outline"
-        ? "transparent"
-        : `var(--theme-${actualTheme}-primary)`,
-    "--button-color":
-      variant === "outline"
-        ? `var(--theme-${actualTheme}-primary)`
-        : `var(--theme-${actualTheme}-dark-80)`,
-    "--button-border": `var(--theme-${actualTheme}-primary)`,
-
-    // Цвета для состояния hover
-    "--button-hover-bg":
-      variant === "outline"
-        ? "transparent"
-        : `var(--theme-${actualTheme}-dark-80)`,
-    "--button-hover-color":
-      variant === "outline"
-        ? `var(--theme-${actualTheme}-dark-80)`
-        : `var(--theme-${actualTheme}-primary)`,
-    "--button-hover-border":
-      variant === "outline"
-        ? `var(--theme-${actualTheme}-dark-80)`
-        : "transparent",
-
-    // Цвета для состояния active
-    "--button-active-bg":
-      variant === "outline"
-        ? "transparent"
-        : `var(--theme-${actualTheme}-dark)`,
-    "--button-active-color": `var(--theme-${actualTheme}-primary)`,
-    "--button-active-border":
-      variant === "outline"
-        ? `var(--theme-${actualTheme}-dark-50)`
-        : `var(--theme-${actualTheme}-dark)`,
-  };
+  const buttonStyle = generateStyle(theme, variant);
 
   // Определяем основной класс в зависимости от варианта и размера
   const buttonClasses = [
-    styles.Base,
-    variant === "outline" ? styles.Outline : styles.Filled,
-    size === "big" ? styles.Big : "",
+    styles.base,
+    variant === "secondary" ? styles.secondary : styles.primary,
+    size === "big" ? styles.big : "",
     className,
   ]
     .filter(Boolean)
@@ -127,20 +86,6 @@ const Button = ({
       </button>
     );
   }
-};
-
-Button.propTypes = {
-  variant: PropTypes.oneOf(["filled", "outline"]),
-  size: PropTypes.oneOf(["normal", "big"]),
-  theme: PropTypes.string,
-  disabled: PropTypes.bool,
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
-  type: PropTypes.string,
-  to: PropTypes.string,
-  href: PropTypes.string,
-  as: PropTypes.elementType,
 };
 
 export default Button;

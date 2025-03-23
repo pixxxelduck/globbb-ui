@@ -15,7 +15,7 @@ function Landing() {
             </div>
           </div>
           <div className={styles.row}>
-            <Button variant="outline" to="/signup">
+            <Button variant="secondary" to="/signup">
               Create an Account
             </Button>
             <Button to="/signin">Log In</Button>
@@ -34,7 +34,7 @@ function Landing() {
             </div>
             <div className={styles.column} style={{ gap: "0.5rem" }}>
               <div className={styles.text}>or</div>
-              <Button variant="outline" to="/signin">
+              <Button variant="secondary" to="/signin">
                 Log In
               </Button>
               <div className={styles.text}>to pick up where you left off</div>
