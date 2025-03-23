@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Logotype from "../../Blocks/Logotype";
-import Button from "../../Blocks/Button";
 import styles from "./Landing.module.css";
+import { primary, secondary } from "../../Blocks/Buttons/Buttons.module.css";
 
 function Landing() {
   return (
@@ -15,10 +15,16 @@ function Landing() {
             </div>
           </div>
           <div className={styles.row}>
-            <Button variant="secondary" to="/signup">
+            <Link className={secondary} to="/signup">
               Create an Account
-            </Button>
-            <Button to="/signin">Log In</Button>
+            </Link>
+            <Link className={primary} to="/signin">
+              Log In
+            </Link>
+            {/* <Button variant="secondary" to="/signup">
+              Create an Account
+            </Button> */}
+            {/* <Button to="/signin">Log In</Button> */}
           </div>
         </div>
         <div className={styles.lead}></div>
@@ -34,9 +40,9 @@ function Landing() {
             </div>
             <div className={styles.column} style={{ gap: "0.5rem" }}>
               <div className={styles.text}>or</div>
-              <Button variant="secondary" to="/signin">
+              <Link className={secondary} to="/signin">
                 Log In
-              </Button>
+              </Link>
               <div className={styles.text}>to pick up where you left off</div>
             </div>
           </div>

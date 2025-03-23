@@ -38,7 +38,7 @@ function SignIn() {
             <Form.Group>
               <PendingButton
                 theme="kobi"
-                size="big"
+                mod="big"
                 pending={isLoading}
                 onClick={handleLoadingClick}
               >

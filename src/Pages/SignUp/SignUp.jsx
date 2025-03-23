@@ -41,7 +41,7 @@ function SignUp() {
             <Form.Group>
               <PendingButton
                 theme="sage"
-                size="big"
+                mod="big"
                 pending={isLoading}
                 onClick={handleLoadingClick}
               >

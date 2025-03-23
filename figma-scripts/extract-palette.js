@@ -14,9 +14,9 @@ const __dirname = path.dirname(__filename);
 const FIGMA_API_TOKEN = process.env.FIGMA_API_TOKEN;
 const FIGMA_FILE_KEY = process.env.FIGMA_FILE_KEY;
 
-// Настройки для сохранения файла
-const OUTPUT_DIR = path.join(__dirname, "../src/");
-const OUTPUT_FILENAME = "themes.css";
+// Настройки для сохранения файлов
+const CSS_OUTPUT_FILE = path.join(__dirname, "extracted", "themes.css");
+const JSON_OUTPUT_FILE = path.join(__dirname, "extracted", "themes.json");
 
 // Шаг 1: Получить структуру документа
 async function getFileStructure() {
@@ -176,13 +176,48 @@ function generateCSSVariables(colorGroups) {
 
 // Шаг 7: Сохранить CSS файл
 function saveToCSSFile(cssContent) {
-  if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  }
-
-  const filePath = path.join(OUTPUT_DIR, OUTPUT_FILENAME);
+  const filePath = CSS_OUTPUT_FILE;
   fs.writeFileSync(filePath, cssContent);
   console.log(`CSS переменные сохранены в ${filePath}`);
+}
+
+// Шаг 8: Преобразовать данные о цветах в структурированный JSON
+function generateJSONStructure(colorGroups) {
+  const result = {
+    groups: {},
+    timestamp: new Date().toISOString(),
+  };
+
+  for (const groupName in colorGroups) {
+    const cssGroupName = groupName.toLowerCase().replace(/\s+/g, "-");
+    result.groups[cssGroupName] = {};
+
+    for (const color of colorGroups[groupName]) {
+      const cssColorName = color.name.toLowerCase().replace(/\s+/g, "-");
+      const cssVarName = `--theme-${cssGroupName}-${cssColorName}`;
+
+      result.groups[cssGroupName][cssColorName] = {
+        name: color.name,
+        cssVariable: cssVarName,
+        rgba: color.rgba,
+        values: {
+          r: color.r,
+          g: color.g,
+          b: color.b,
+          a: color.a,
+        },
+      };
+    }
+  }
+
+  return result;
+}
+
+// Шаг 9: Сохранить JSON файл
+function saveToJSONFile(jsonData) {
+  const filePath = JSON_OUTPUT_FILE;
+  fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+  console.log(`JSON структура сохранена в ${filePath}`);
 }
 
 // Основная функция
@@ -211,7 +246,11 @@ async function main() {
     // 6. Сохраняем результат в CSS файл
     saveToCSSFile(cssContent);
 
-    // 7. Выводим статистику
+    // 7. Генерируем и сохраняем JSON структуру
+    const jsonStructure = generateJSONStructure(colorGroups);
+    saveToJSONFile(jsonStructure);
+
+    // 8. Выводим статистику
     let totalColors = 0;
 
     for (const groupName in colorGroups) {

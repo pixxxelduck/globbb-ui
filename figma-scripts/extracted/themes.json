@@ -1,0 +1,775 @@
+{
+  "groups": {
+    "ash-gray": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-ash-gray-light",
+        "rgba": "rgba(176, 187, 188, 1)",
+        "values": {
+          "r": 176,
+          "g": 187,
+          "b": 188,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-ash-gray-light-50",
+        "rgba": "rgba(176, 187, 188, 0.5)",
+        "values": {
+          "r": 176,
+          "g": 187,
+          "b": 188,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-ash-gray-light-25",
+        "rgba": "rgba(176, 187, 188, 0.25)",
+        "values": {
+          "r": 176,
+          "g": 187,
+          "b": 188,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-ash-gray-dark",
+        "rgba": "rgba(58, 70, 70, 1)",
+        "values": {
+          "r": 58,
+          "g": 70,
+          "b": 70,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-ash-gray-dark-85",
+        "rgba": "rgba(58, 70, 70, 0.85)",
+        "values": {
+          "r": 58,
+          "g": 70,
+          "b": 70,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-ash-gray-dark-80",
+        "rgba": "rgba(58, 70, 70, 0.8)",
+        "values": {
+          "r": 58,
+          "g": 70,
+          "b": 70,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-ash-gray-dark-50",
+        "rgba": "rgba(58, 70, 70, 0.5)",
+        "values": {
+          "r": 58,
+          "g": 70,
+          "b": 70,
+          "a": 0.5
+        }
+      }
+    },
+    "sage": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-sage-light",
+        "rgba": "rgba(178, 190, 131, 1)",
+        "values": {
+          "r": 178,
+          "g": 190,
+          "b": 131,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-sage-light-50",
+        "rgba": "rgba(178, 190, 131, 0.5)",
+        "values": {
+          "r": 178,
+          "g": 190,
+          "b": 131,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-sage-light-25",
+        "rgba": "rgba(178, 190, 131, 0.25)",
+        "values": {
+          "r": 178,
+          "g": 190,
+          "b": 131,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-sage-dark",
+        "rgba": "rgba(89, 107, 31, 1)",
+        "values": {
+          "r": 89,
+          "g": 107,
+          "b": 31,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-sage-dark-85",
+        "rgba": "rgba(89, 107, 31, 0.85)",
+        "values": {
+          "r": 89,
+          "g": 107,
+          "b": 31,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-sage-dark-80",
+        "rgba": "rgba(89, 107, 31, 0.8)",
+        "values": {
+          "r": 89,
+          "g": 107,
+          "b": 31,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-sage-dark-50",
+        "rgba": "rgba(89, 107, 31, 0.5)",
+        "values": {
+          "r": 89,
+          "g": 107,
+          "b": 31,
+          "a": 0.5
+        }
+      }
+    },
+    "kobi": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-kobi-light",
+        "rgba": "rgba(230, 161, 200, 1)",
+        "values": {
+          "r": 230,
+          "g": 161,
+          "b": 200,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-kobi-light-50",
+        "rgba": "rgba(230, 161, 200, 0.5)",
+        "values": {
+          "r": 230,
+          "g": 161,
+          "b": 200,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-kobi-light-25",
+        "rgba": "rgba(230, 161, 200, 0.25)",
+        "values": {
+          "r": 230,
+          "g": 161,
+          "b": 200,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-kobi-dark",
+        "rgba": "rgba(156, 78, 120, 1)",
+        "values": {
+          "r": 156,
+          "g": 78,
+          "b": 120,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-kobi-dark-85",
+        "rgba": "rgba(156, 78, 120, 0.85)",
+        "values": {
+          "r": 156,
+          "g": 78,
+          "b": 120,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-kobi-dark-80",
+        "rgba": "rgba(156, 78, 120, 0.8)",
+        "values": {
+          "r": 156,
+          "g": 78,
+          "b": 120,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-kobi-dark-50",
+        "rgba": "rgba(156, 78, 120, 0.5)",
+        "values": {
+          "r": 156,
+          "g": 78,
+          "b": 120,
+          "a": 0.5
+        }
+      }
+    },
+    "fawn": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-fawn-light",
+        "rgba": "rgba(215, 177, 118, 1)",
+        "values": {
+          "r": 215,
+          "g": 177,
+          "b": 118,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-fawn-light-50",
+        "rgba": "rgba(215, 177, 118, 0.5)",
+        "values": {
+          "r": 215,
+          "g": 177,
+          "b": 118,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-fawn-light-25",
+        "rgba": "rgba(215, 177, 118, 0.25)",
+        "values": {
+          "r": 215,
+          "g": 177,
+          "b": 118,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-fawn-dark",
+        "rgba": "rgba(102, 70, 28, 1)",
+        "values": {
+          "r": 102,
+          "g": 70,
+          "b": 28,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-fawn-dark-85",
+        "rgba": "rgba(102, 70, 28, 0.85)",
+        "values": {
+          "r": 102,
+          "g": 70,
+          "b": 28,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-fawn-dark-80",
+        "rgba": "rgba(102, 70, 28, 0.8)",
+        "values": {
+          "r": 102,
+          "g": 70,
+          "b": 28,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-fawn-dark-50",
+        "rgba": "rgba(102, 70, 28, 0.5)",
+        "values": {
+          "r": 102,
+          "g": 70,
+          "b": 28,
+          "a": 0.5
+        }
+      }
+    },
+    "cadet-blue": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-cadet-blue-light",
+        "rgba": "rgba(176, 166, 196, 1)",
+        "values": {
+          "r": 176,
+          "g": 166,
+          "b": 196,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-cadet-blue-light-50",
+        "rgba": "rgba(176, 166, 196, 0.5)",
+        "values": {
+          "r": 176,
+          "g": 166,
+          "b": 196,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-cadet-blue-light-25",
+        "rgba": "rgba(176, 166, 196, 0.25)",
+        "values": {
+          "r": 176,
+          "g": 166,
+          "b": 196,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-cadet-blue-dark",
+        "rgba": "rgba(73, 62, 101, 1)",
+        "values": {
+          "r": 73,
+          "g": 62,
+          "b": 101,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-cadet-blue-dark-85",
+        "rgba": "rgba(73, 62, 101, 0.85)",
+        "values": {
+          "r": 73,
+          "g": 62,
+          "b": 101,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-cadet-blue-dark-80",
+        "rgba": "rgba(73, 62, 101, 0.8)",
+        "values": {
+          "r": 73,
+          "g": 62,
+          "b": 101,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-cadet-blue-dark-50",
+        "rgba": "rgba(73, 62, 101, 0.5)",
+        "values": {
+          "r": 73,
+          "g": 62,
+          "b": 101,
+          "a": 0.5
+        }
+      }
+    },
+    "pastel-blue": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-pastel-blue-light",
+        "rgba": "rgba(157, 203, 201, 1)",
+        "values": {
+          "r": 157,
+          "g": 203,
+          "b": 201,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-pastel-blue-light-50",
+        "rgba": "rgba(157, 203, 201, 0.5)",
+        "values": {
+          "r": 157,
+          "g": 203,
+          "b": 201,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-pastel-blue-light-25",
+        "rgba": "rgba(157, 203, 201, 0.25)",
+        "values": {
+          "r": 157,
+          "g": 203,
+          "b": 201,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-pastel-blue-dark",
+        "rgba": "rgba(17, 105, 100, 1)",
+        "values": {
+          "r": 17,
+          "g": 105,
+          "b": 100,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-pastel-blue-dark-85",
+        "rgba": "rgba(17, 105, 100, 0.85)",
+        "values": {
+          "r": 17,
+          "g": 105,
+          "b": 100,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-pastel-blue-dark-80",
+        "rgba": "rgba(17, 105, 100, 0.8)",
+        "values": {
+          "r": 17,
+          "g": 105,
+          "b": 100,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-pastel-blue-dark-50",
+        "rgba": "rgba(17, 105, 100, 0.5)",
+        "values": {
+          "r": 17,
+          "g": 105,
+          "b": 100,
+          "a": 0.5
+        }
+      }
+    },
+    "baby-blue": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-baby-blue-light",
+        "rgba": "rgba(135, 189, 241, 1)",
+        "values": {
+          "r": 135,
+          "g": 189,
+          "b": 241,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-baby-blue-light-50",
+        "rgba": "rgba(135, 189, 241, 0.5)",
+        "values": {
+          "r": 135,
+          "g": 189,
+          "b": 241,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-baby-blue-light-25",
+        "rgba": "rgba(135, 189, 241, 0.25)",
+        "values": {
+          "r": 135,
+          "g": 189,
+          "b": 241,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-baby-blue-dark",
+        "rgba": "rgba(68, 112, 152, 1)",
+        "values": {
+          "r": 68,
+          "g": 112,
+          "b": 152,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-baby-blue-dark-85",
+        "rgba": "rgba(68, 112, 152, 0.85)",
+        "values": {
+          "r": 68,
+          "g": 112,
+          "b": 152,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-baby-blue-dark-80",
+        "rgba": "rgba(68, 112, 152, 0.8)",
+        "values": {
+          "r": 68,
+          "g": 112,
+          "b": 152,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-baby-blue-dark-50",
+        "rgba": "rgba(54, 98, 126, 0.5)",
+        "values": {
+          "r": 54,
+          "g": 98,
+          "b": 126,
+          "a": 0.5
+        }
+      }
+    },
+    "sandy": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-sandy-light",
+        "rgba": "rgba(230, 166, 107, 1)",
+        "values": {
+          "r": 230,
+          "g": 166,
+          "b": 107,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-sandy-light-50",
+        "rgba": "rgba(230, 166, 107, 0.5)",
+        "values": {
+          "r": 230,
+          "g": 166,
+          "b": 107,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-sandy-light-25",
+        "rgba": "rgba(230, 166, 107, 0.25)",
+        "values": {
+          "r": 230,
+          "g": 166,
+          "b": 107,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-sandy-dark",
+        "rgba": "rgba(159, 76, 8, 1)",
+        "values": {
+          "r": 159,
+          "g": 76,
+          "b": 8,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-sandy-dark-85",
+        "rgba": "rgba(159, 76, 8, 0.85)",
+        "values": {
+          "r": 159,
+          "g": 76,
+          "b": 8,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-sandy-dark-80",
+        "rgba": "rgba(159, 76, 8, 0.8)",
+        "values": {
+          "r": 159,
+          "g": 76,
+          "b": 8,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-sandy-dark-50",
+        "rgba": "rgba(159, 76, 8, 0.5)",
+        "values": {
+          "r": 159,
+          "g": 76,
+          "b": 8,
+          "a": 0.5
+        }
+      }
+    },
+    "parrot-pink": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-parrot-pink-light",
+        "rgba": "rgba(203, 156, 163, 1)",
+        "values": {
+          "r": 203,
+          "g": 156,
+          "b": 163,
+          "a": 1
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-parrot-pink-light-50",
+        "rgba": "rgba(203, 156, 163, 0.5)",
+        "values": {
+          "r": 203,
+          "g": 156,
+          "b": 163,
+          "a": 0.5
+        }
+      },
+      "light-25": {
+        "name": "light-25",
+        "cssVariable": "--theme-parrot-pink-light-25",
+        "rgba": "rgba(203, 156, 163, 0.25)",
+        "values": {
+          "r": 203,
+          "g": 156,
+          "b": 163,
+          "a": 0.25
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-parrot-pink-dark",
+        "rgba": "rgba(92, 36, 41, 1)",
+        "values": {
+          "r": 92,
+          "g": 36,
+          "b": 41,
+          "a": 1
+        }
+      },
+      "dark-85": {
+        "name": "dark-85",
+        "cssVariable": "--theme-parrot-pink-dark-85",
+        "rgba": "rgba(92, 36, 41, 0.85)",
+        "values": {
+          "r": 92,
+          "g": 36,
+          "b": 41,
+          "a": 0.85
+        }
+      },
+      "dark-80": {
+        "name": "dark-80",
+        "cssVariable": "--theme-parrot-pink-dark-80",
+        "rgba": "rgba(92, 36, 41, 0.8)",
+        "values": {
+          "r": 92,
+          "g": 36,
+          "b": 41,
+          "a": 0.8
+        }
+      },
+      "dark-50": {
+        "name": "dark-50",
+        "cssVariable": "--theme-parrot-pink-dark-50",
+        "rgba": "rgba(92, 36, 41, 0.5)",
+        "values": {
+          "r": 92,
+          "g": 36,
+          "b": 41,
+          "a": 0.5
+        }
+      }
+    },
+    "white": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-white-light",
+        "rgba": "rgba(255, 255, 255, 1)",
+        "values": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 1
+        }
+      },
+      "light-80": {
+        "name": "light-80",
+        "cssVariable": "--theme-white-light-80",
+        "rgba": "rgba(255, 255, 255, 0.8)",
+        "values": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 0.8
+        }
+      },
+      "light-50": {
+        "name": "light-50",
+        "cssVariable": "--theme-white-light-50",
+        "rgba": "rgba(255, 255, 255, 0.5)",
+        "values": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 0.5
+        }
+      }
+    },
+    "transparent": {
+      "light": {
+        "name": "light",
+        "cssVariable": "--theme-transparent-light",
+        "rgba": "rgba(255, 255, 255, 0)",
+        "values": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 0
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "cssVariable": "--theme-transparent-dark",
+        "rgba": "rgba(0, 0, 0, 0)",
+        "values": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0
+        }
+      }
+    }
+  },
+  "timestamp": "2025-03-23T18:46:58.889Z"
+}
