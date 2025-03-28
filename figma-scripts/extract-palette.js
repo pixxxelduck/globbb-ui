@@ -119,21 +119,24 @@ function parseColorsStructure(pageContent) {
 
   const colorGroups = {};
 
-  // Находим все секции (группы цветов)
   if (pageNode.children) {
-    // Ищем все ноды с типом SECTION
     const sections = pageNode.children.filter(
-      (node) => node.type === "SECTION"
+      (node) =>
+        node.type === "SECTION" && node.devStatus?.type === "READY_FOR_DEV"
     );
 
-    console.log(`Найдено ${sections.length} секций (групп цветов)`);
+    if (sections.length === 0) {
+      throw new Error(
+        'На странице Palette не найдено ни одной секции с пометкой "Ready for dev"'
+      );
+    }
 
-    // Обрабатываем каждую секцию
+    console.log(`Найдено ${sections.length} секций с пометкой "Ready for dev"`);
+
     for (const section of sections) {
       const groupName = section.name;
       colorGroups[groupName] = [];
 
-      // Обработка фреймов внутри секции
       if (section.children) {
         const frames = section.children.filter((node) => node.type === "FRAME");
 
