@@ -1,5 +1,5 @@
 import React from "react";
-import { THEMES } from "../../constants/themes";
+// import { THEMES } from "../../constants/themes";
 
 /**
  * Компонент с поддержкой цветовых тем и их оттенков
@@ -20,10 +20,12 @@ const Preloader = ({
   className = "",
   opacity = 1,
 }) => {
-  const fillColor =
-    THEMES[theme] && THEMES[theme][variant]
-      ? THEMES[theme][variant]
-      : THEMES["ash-gray"]["dark"];
+  // const fillColor =
+  //   THEMES[theme] && THEMES[theme][variant]
+  //     ? THEMES[theme][variant]
+  //     : THEMES["ash-gray"]["dark"];
+
+  const themeVarName = `--theme-${theme}-${variant}`;
 
   return (
     <svg
@@ -38,7 +40,7 @@ const Preloader = ({
     >
       <path
         fill="none"
-        stroke={fillColor}
+        stroke={`var(${themeVarName})`}
         strokeWidth="25"
         strokeLinecap="round"
         strokeDasharray="300 385"

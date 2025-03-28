@@ -20,7 +20,7 @@ function SignIn() {
       <div className={styles.SignIn}>
         <div className={styles.Picture}></div>
         <div className={styles.Content}>
-          <Logotype theme="kobi" variant="primary-50" />
+          <Logotype theme="kobi" variant="light-50" />
           <Form theme="kobi" className={styles.Form} disabled={isLoading}>
             <h1>Introduce yourself, please</h1>
             <p>

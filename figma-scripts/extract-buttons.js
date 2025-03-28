@@ -79,7 +79,7 @@ async function getPageContent(pageId) {
   return await response.json();
 }
 
-// Функция для загрузки и парсинга theme-colors.json файла
+// Функция для загрузки и парсинга выгрузки цветовой палитры
 function loadThemeVariables() {
   const themePath = path.join(OUTPUT_DIR, THEME_COLORS_FILENAME);
   if (!fs.existsSync(themePath)) {
@@ -365,10 +365,17 @@ function parseButtonsStructure(pageContent) {
 
   // Находим все секции (типы кнопок с цветовыми схемами)
   if (pageNode.children) {
-    // Ищем все ноды с типом SECTION
+    // Ищем все ноды с типом SECTION и пометкой Ready for dev
     const sections = pageNode.children.filter(
-      (node) => node.type === "SECTION"
+      (node) =>
+        node.type === "SECTION" && node.devStatus?.type === "READY_FOR_DEV"
     );
+
+    if (sections.length === 0) {
+      throw new Error(
+        'На странице Buttons не найдено ни одной секции с пометкой "Ready for dev"'
+      );
+    }
 
     console.log(`Найдено ${sections.length} секций (компонентов кнопок)`);
 
@@ -434,14 +441,6 @@ function parseButtonsStructure(pageContent) {
             effects: extractEffects(frame),
           };
 
-          // Убираем подробный вывод свойств padding и font
-          // console.log(`  Padding: ${JSON.stringify(buttonProps.padding)}`);
-          // console.log(
-          //   `  Font: ${
-          //     buttonProps.font ? JSON.stringify(buttonProps.font) : "не найден"
-          //   }`
-          // );
-
           if (modifier) {
             // Это кнопка с модификатором (например, hover/big)
 
@@ -463,11 +462,6 @@ function parseButtonsStructure(pageContent) {
             buttonVariants[buttonVariant].modifiers[modifier][
               colorScheme
             ].states[state] = buttonProps;
-
-            // Используем более компактный лог
-            // console.log(
-            //   `  Сохранены стили для кнопки с модификатором: ${buttonVariant} / ${modifier}`
-            // );
           } else {
             // Это базовая кнопка (без явного модификатора)
 
@@ -491,11 +485,6 @@ function parseButtonsStructure(pageContent) {
             buttonVariants[buttonVariant].modifiers.normal[colorScheme].states[
               state
             ] = normalModProps;
-
-            // Используем более компактный лог
-            // console.log(
-            //   `  Сохранены стили для базовой кнопки: ${buttonVariant} (тема: ${colorScheme}, состояние: ${state})`
-            // );
           }
         }
       }
@@ -503,11 +492,6 @@ function parseButtonsStructure(pageContent) {
   }
 
   return buttonVariants;
-}
-
-// Функция для использования содержимого JSON файла (для отладки)
-function parseJsonButtonData(jsonData) {
-  return jsonData;
 }
 
 // Функция для выявления всех отличий между базовым состоянием и модификатором
@@ -557,10 +541,6 @@ function extractDifferences(baseState, modState) {
       ) {
         cssContent += `  ${cssName}: ${formatRem(value)};\n`;
         hasDifferences = true;
-        // Убираем лог об отличии
-        // console.log(
-        //   `Обнаружено отличие в свойстве ${cssName}: ${baseProp} -> ${value}`
-        // );
       }
     }
   }
@@ -584,12 +564,6 @@ function extractDifferences(baseState, modState) {
     if (paddingDiff) {
       cssContent += `  padding: ${formatPadding(modPadding)};\n`;
       hasDifferences = true;
-      // Убираем лог об отличии
-      // console.log(
-      //   `Обнаружено отличие в padding: ${JSON.stringify(
-      //     basePadding
-      //   )} -> ${JSON.stringify(modPadding)}`
-      // );
     }
   }
 
@@ -667,21 +641,6 @@ function hasColorDifferences(baseState, modState) {
   const textDiff = modState.textColor !== baseState.textColor;
 
   const hasDifference = bgDiff || borderDiff || textDiff;
-
-  // Убираем подробные логи
-  // if (hasDifference) {
-  //   console.log("Обнаружены отличия в цветовых свойствах:");
-  //   if (bgDiff)
-  //     console.log(
-  //       `  background-color: ${baseState.backgroundColor} -> ${modState.backgroundColor}`
-  //     );
-  //   if (borderDiff)
-  //     console.log(
-  //       `  border-color: ${baseState.borderColor} -> ${modState.borderColor}`
-  //     );
-  //   if (textDiff)
-  //     console.log(`  color: ${baseState.textColor} -> ${modState.textColor}`);
-  // }
 
   return hasDifference;
 }
@@ -863,11 +822,6 @@ function generateCSS(buttonVariants) {
             cssContent += `.${buttonVariant}[mod="${modifierName}"] {\n`;
             cssContent += modDiff;
             cssContent += `}\n\n`;
-          } else {
-            // Убираем подробный лог
-            // console.log(
-            //   `Модификатор "${modifierName}" для "${buttonVariant}" не отличается от базового состояния — CSS не будет сгенерирован.`
-            // );
           }
 
           // Проверяем, влияет ли модификатор на цвет
@@ -1021,8 +975,7 @@ async function main() {
     if (fs.existsSync(jsonFilePath)) {
       console.log(`Найден файл JSON для отладки: ${jsonFilePath}`);
       try {
-        const jsonData = JSON.parse(fs.readFileSync(jsonFilePath, "utf8"));
-        buttonVariants = parseJsonButtonData(jsonData);
+        buttonVariants = JSON.parse(fs.readFileSync(jsonFilePath, "utf8"));
         console.log("Данные успешно загружены из JSON файла");
       } catch (jsonError) {
         console.error("Ошибка при парсинге JSON файла для отладки:", jsonError);

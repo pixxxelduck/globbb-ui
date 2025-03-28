@@ -20,7 +20,7 @@ function SignUp() {
       <div className={styles.SignUp}>
         <div className={styles.Picture}></div>
         <div className={styles.Content}>
-          <Logotype theme="sage" variant="primary-50" />
+          <Logotype theme="sage" variant="light-50" />
           <Form className={styles.Form} theme="sage">
             <h1>How can we introduce you?</h1>
             <p>
